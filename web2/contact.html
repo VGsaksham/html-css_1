@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="contact.css"></link>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css">
+</head>
+<body>
+ 
+    <section class="header">
+    
+        <nav>
+         <div class="head">
+            
+             <a href="home.html"><img class="imglogo" src="pics/Prime-Logo_200x (1).avif" alt="LOGO"></a>
+             <div class="nav-links" id="navlinks">
+                
+                <i class="fa-solid fa-x" onclick="hidemenu()"></i>
+                <ul>
+                    <li><a href="home.html">HOME</a> </li>
+                    <li><a href="product.html">PRODUCTS</a> </li>
+                    <li><a href="about.html">ABOUT</a> </li>
+                    <li><a href="contact.html">CONTACT</a> </li>
+                
+
+                 
+                </ul>
+             </div>
+             <i class="fa-solid fa-bars" onclick="showmenu()"></i>
+            </div>
+        </div>
+        <hr width="99%" class="pc">
+       
+     <div class="frm">
+        <form class="form" onsubmit="sendEmail();  ">
+            <div class="title">Contact us</div>
+            <input type="text" placeholder="Name" id="name" class="input">
+            <input type="email" placeholder="Your email" id="email" class="input">
+            <input type="text" placeholder="Your subject" id="subject" class="input">
+            <textarea placeholder="Your message" id="message" ></textarea>
+             
+            <button type="submit">Submit</button>
+        </form>
+     </div>
+           
+    </section>
+    <section class="final">
+       
+        <h3>
+        ABOUT PRIME
+        </h3>
+        <p>PRIME was developed to fill the void where great taste meets<br class="mobile"> function. With bold, thirst-<br class="pc">quenching flavors to help you <br class="mobile">refresh, replenish, and refuel, PRIME is the perfect boost for<br class="mobile"> any <br class="pc"> We're confident you'll love it as much as we do.</p>
+        <a href="#"> <i class="fa-brands fa-facebook-f"></i></a>
+        <a href=""><i class="fa-brands fa-instagram"></i></a>
+        <a href=""> <i class="fa-brands fa-youtube"></i></a>
+        <h4><i class="fa-regular fa-copyright"></i> All terms and conditions reserverd </h4>
+    </section>
+   
+<script src="https://kit.fontawesome.com/499b4774a6.js" crossorigin="anonymous"></script>
+<script>
+
+    var navlinks = document.getElementById("navlinks");
+
+    function showmenu(){
+        navlinks.style.right = "0";
+    }
+
+    function hidemenu(){
+        navlinks.style.right = "-200px";
+    }
+
+
+</script>
+<script src="https://smtpjs.com/v3/smtp.js">
+</script>
+<script>
+    function sendEmail(){
+                    Email.send({
+                Host : "smtp.elasticemail.com" ,
+                Username : "veronultra1@gmail.com" ,
+                Password : "D3501860FCB3C4103A6071EC556619EFE175" ,
+                To : 'vgtest123455@gmail.com',
+                From : document.getElementById(email).value ,
+                Subject : "website-Contact" ,
+                Body : "Name:" + document.getElementById("name").value
+                       + "<br> Email:" + document.getElementById("email").value
+                       + "<br> Subject:" + document.getElementById("subject").value
+                       + "<br> Message:" + document.getElementById("message").value
+
+
+            }).then(
+            message => alert("message sent sucesfully !")
+            );
+
+    }
+</script>
+
+
+</body>
+</html>

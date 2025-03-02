@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="prod.css"></link>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css">
+</head>
+<body>
+ 
+    <section class="header">
+    
+        <nav>
+         <div class="head">
+            
+             <a href="home.html"><img class="imglogo" src="pics/Prime-Logo_200x (1).avif" alt="LOGO"></a>
+             <div class="nav-links" id="navlinks">
+                
+                <i class="fa-solid fa-x" onclick="hidemenu()"></i>
+                <ul>
+                    <li><a href="home.html">HOME</a> </li>
+                    <li><a href="product.html">PRODUCTS</a> </li>
+                    <li><a href="about.html">ABOUT</a> </li>
+                    <li><a href="contact.html">CONTACT</a> </li>
+                </ul>
+             </div>
+             <i class="fa-solid fa-bars" onclick="showmenu()"></i>
+            </div>
+        </div>
+        <hr width="99%">
+       
+        <div class="text-box" >
+            <h1>
+                
+               To Buy Any Of Our Products...
+            </h1>
+            <p>Sorry our website is currently under work<br class="mobile"> so if anyone wants to buy any<br class="pc"> of our products<br class="mobile">please either DM us on our <a href="#">insta</a> page ,</p>
+            <br class="mobile"><p>or contact us through our provided information<br class="mobile"> if you are lazy then<br class="pc">just click the below button
+
+                <div class="btn">
+                    <div class="button-borders">
+                       <a href="contact.html"> <button class="primary-button" > CONTACT US!
+                        </button></a>
+                      </div>
+                  
+                </div>
+                   
+        </nav>
+        
+        
+    </section>
+    <section class="final">
+       
+        <h3>
+        ABOUT PRIME
+        </h3>
+        <p>PRIME was developed to fill the void where great taste meets<br class="mobile"> function. With bold, thirst-<br class="pc">quenching flavors to help you <br class="mobile">refresh, replenish, and refuel, PRIME is the perfect boost for<br class="mobile"> any <br class="pc"> We're confident you'll love it as much as we do.</p>
+        <a href="#"> <i class="fa-brands fa-facebook-f"></i></a>
+        <a href=""><i class="fa-brands fa-instagram"></i></a>
+        <a href=""> <i class="fa-brands fa-youtube"></i></a>
+        <h4><i class="fa-regular fa-copyright"></i> All terms and conditions reserverd </h4>
+    </section>
+   
+   
+<script src="https://kit.fontawesome.com/499b4774a6.js" crossorigin="anonymous"></script>
+<script>
+
+    var navlinks = document.getElementById("navlinks");
+
+    function showmenu(){
+        navlinks.style.right = "0";
+    }
+
+    function hidemenu(){
+        navlinks.style.right = "-200px";
+    }
+
+
+</script>
+
+
+</body>
+</html>
